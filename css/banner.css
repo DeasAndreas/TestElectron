@@ -1,0 +1,129 @@
+.container {
+    margin: 0 auto;
+    font-size: 0;
+  }
+  
+  .beegee {
+    /*background: #4e4e4e;*/
+    border: .25rem solid transparent;
+    border-radius: 100%;
+    margin: 1rem auto 0;
+    height: 10rem;
+    width: 10rem;
+    animation: 2s 1.5s ease-in-out forwards beegee;
+  }
+  
+  .m,
+  .left,
+  .right {
+    position: relative;
+  }
+  
+  .left:after,
+  .right:after {
+    content: ' ';
+    position: absolute;
+    bottom: 2rem;
+    border: 2rem solid transparent;
+  }
+  
+  .m {
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+    margin: 4rem 1rem;
+    background: #00aeef;
+    backface-visibility: hidden;
+  }
+  
+  .left {
+    transform: skewY(26deg);
+    margin-right: 0;
+  }
+  
+  .right {
+    transform: skewY(-26deg);
+    margin-left: 0;
+  }
+  
+  .left:after {
+    border-bottom-color: #34495E;
+    border-right-color: #34495E;
+    animation: 1s .5s ease-in-out forwards flap-left;
+  
+  }
+  
+  .right:after {
+    /* background: red; */
+    border-bottom-color: #34495E;
+    border-left-color: #34495E;
+    animation: 1s .5s ease-in-out forwards flap-right;
+  }
+  
+ 
+  @keyframes flap-left {
+    0% {  
+      transform: rotateX(0) translateY(0);
+    }
+    70% {
+      transform: translateY(4rem);
+    }
+    100% {
+      transform: rotatez(180deg) translateY(-4rem);
+    }
+  }
+  
+  @keyframes flap-right {
+    0% {  
+      transform: rotateX(0) translateY(0);
+    }
+    70% {
+      transform: translateY(4rem);
+    }
+    100% {
+      transform: rotatez(-180deg) translateY(-4rem);
+    }
+  }
+  
+  @keyframes beegee {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #34495E;
+    }
+  }
+
+  /*--------------------------------------Text annimation----------------------------------------------*/
+  h1{
+    text-align:center;
+    font-size: 4em;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    animation-delay: 1s;
+    text-transform: uppercase;
+  }
+  
+
+  h2{
+    text-align:center;
+    font-size: 1.3em;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    animation-delay: 5.8s;
+  }
+  .title-arrow{
+     color: black;
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+    padding: 35px 0px 35px 0px;
+    animation-delay: 6.5s;
+  }
+  
+  #navigation{
+    width: 100%;
+    height: 54px;
+    background: black;
+  }
+  
